@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justin Project</title>
+
+    <!-- Webpage Styles  -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Boxicons cdn  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header  -->
+    <header class="header">
+      <nav class="nav">
+        <h1 class="logo">Manage Campaigns</h1>
+        <button class="btn" id="add1">Add Campaign</button>
+      </nav>
+    </header>
+
+    <main class="landing" id="landing">
+      <div class="cover">
+        <img src="/bks.png" alt="Book" />
+        <p>
+          No campaigns found. <span id="add2">Add campaign</span> to begin recording and
+          managing campaigns
+        </p>
+      </div>
+    </main>
+
+    <section class="campaign" id="form">
+      <div class="cover">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="header">
+          <h3>Add Campaign</h3>
+          <i class="bx bx-x" id="remove"></i>
+        </div>
+        <form action="#" class="form">
+          <div class="name form-all">
+            <label for="">Name</label>
+            <input type="text" id="name" placeholder="Campaign Name" />
+          </div>
+          <div class="type form-all">
+            <label for="">Label</label>
+            <select name="type" id="type">
+              <option value="" disabled selected hidden>
+                Select a campaign type
+              </option>
+              <option value="Routing Immunization">Routing Immunization</option>
+              <option value="Polio Vaccination">Polio Vaccination</option>
+              <option value="Covid-19 Vaccination">Covid-19 Vaccination</option>
+              <option value="Malnutrition Injection">
+                Malnutrition Injection
+              </option>
+            </select>
+          </div>
+          <div class="duration-start-end form-all">
+            <label for="">Duration</label>
+            <div class="dates">
+              <input type="date" id="date-first"/>
+              <input type="date" id="date-last"/>
+            </div>
+          </div>
+          <button id="btn-save" type="submit">Save</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- BG Opacity  -->
+    <div id="opacity"></div>
+
+    <!-- Table  -->
+    <div class="body table-visibility" id="table">
+      <ul class="f-row" id="f-row">
+        <li class="table-header">
+          <div class="col col-1">Campaign Name</div>
+          <div class="col col-2">Type</div>
+          <div class="col col-3">Status</div>
+          <div class="col col-4"></div>
+        </li>
+      </ul>
+    </div>
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>
